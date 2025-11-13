@@ -14,10 +14,15 @@
   min-width: 0;
 }
 .lShape {
-  animation: beathe 0.6s forwards infinite;
-  margin-left: .3rem;
+  color: rgba(13, 13, 13, 0.809);
+  font-weight: 100;
 }
-@keyframes beathe {
+
+.breathing {
+  animation: breathe 0.6s forwards infinite;
+}
+
+@keyframes breathe {
   0% {
     opacity: 0;
   }
