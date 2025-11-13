@@ -2,15 +2,22 @@
   display: flex;
   flex-direction: row;
   text-align: left;
-  width: 50vw;
+  width: 16vw;
   justify-content: flex-start;
   align-items: flex-start;
   position: relative;
   left: 20%;
 }
+.green {
+  color: rgb(42, 170, 42);
+}
+h2 {
+  margin: 0;
+  margin-left: 0.1rem;
+}
 .currentWord {
   width: fit-content;
-  display: inline-block;
+  display: flex;
   min-width: 0;
 }
 .lShape {

@@ -7,12 +7,12 @@ const SentenceWriter = () => {
   return (
     <div className={styles.sentenceContainer}>
       <div className={styles.currentWord}>
-        <h2>{typedWord}</h2>
+        <h2>I </h2> <h2 className={styles.green}>{ typedWord}</h2>
       </div>
       <div
-        className={`${styles.lShape} ${isBreathing ? styles.breathing : ""}`}
+        className={`${isBreathing ? styles.breathing : ""}`}
       >
-        <h2>|</h2>
+        <h2 className={styles.lShape}>|</h2>
       </div>
     </div>
   );
