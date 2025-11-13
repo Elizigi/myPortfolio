@@ -7,7 +7,9 @@ const SentenceWriterMV = () => {
   const selectedSentence = useRef(0);
   const timeDelay = useRef(50);
   const timeToRead = 2000; //milliseconds
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const minTypeDelay = 70;
+  const maxLetterVariation = 150;
 
   const chooseWord = () => {
     selectedSentence.current = Math.floor(
@@ -15,8 +17,9 @@ const SentenceWriterMV = () => {
     );
     console.log(selectedSentence.current);
     setTypedWord("");
+
     currentLetterIdx.current = 0;
-    intervalRef.current = setInterval(() => {
+    timeoutRef.current = setTimeout(() => {
       addLetter();
     }, timeDelay.current);
   };
@@ -24,25 +27,29 @@ const SentenceWriterMV = () => {
   useEffect(() => {
     chooseWord();
     return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const addLetter = () => {
-    timeDelay.current = Math.floor(Math.random() * 200);
+    timeDelay.current =
+      minTypeDelay + Math.floor(Math.random() * maxLetterVariation);
+
     const sentence = sentencesModelArray[selectedSentence.current];
-    console.log(sentence);
+
     const positionToAdd = currentLetterIdx.current;
     setTypedWord((perv) => perv + sentence[positionToAdd]);
     currentLetterIdx.current++;
 
     if (sentence.length === currentLetterIdx.current) {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-      intervalRef.current = null;
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
       currentLetterIdx.current = 0;
       setTimeout(() => chooseWord(), timeToRead);
+      return;
     }
+    timeoutRef.current = setTimeout(() => addLetter(), timeDelay.current);
   };
 
   return { chooseWord, typedWord };
