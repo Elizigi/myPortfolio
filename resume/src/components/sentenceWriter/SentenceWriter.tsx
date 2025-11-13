@@ -1,8 +1,9 @@
+import { sentencesModelArray } from "../../model/sentencesModel";
 import styles from "./SentenceWriter.module.scss";
-import SentenceWriterMV from "./SentenceWriterMV";
+import UseSentenceWriter from "../../hooks/SentenceWriterHook";
 
 const SentenceWriter = () => {
-  const { typedWord } = SentenceWriterMV();
+  const { typedWord } = UseSentenceWriter(sentencesModelArray);
   return (
     <div className={styles.sentenceContainer}>
       <div className={styles.currentWord}>

@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { sentencesModelArray } from "../../model/sentencesModel";
 
-const SentenceWriterMV = () => {
+const UseSentenceWriter = (sentencesArray: string[]) => {
   const [typedWord, setTypedWord] = useState("");
   const currentLetterIdx = useRef(0);
   const selectedSentence = useRef(0);
@@ -13,7 +12,7 @@ const SentenceWriterMV = () => {
 
   const chooseWord = () => {
     selectedSentence.current = Math.floor(
-      Math.random() * sentencesModelArray.length
+      Math.random() * sentencesArray.length
     );
     console.log(selectedSentence.current);
     setTypedWord("");
@@ -36,7 +35,7 @@ const SentenceWriterMV = () => {
     timeDelay.current =
       minTypeDelay + Math.floor(Math.random() * maxLetterVariation);
 
-    const sentence = sentencesModelArray[selectedSentence.current];
+    const sentence = sentencesArray[selectedSentence.current];
 
     const positionToAdd = currentLetterIdx.current;
     setTypedWord((perv) => perv + sentence[positionToAdd]);
@@ -55,4 +54,4 @@ const SentenceWriterMV = () => {
   return { chooseWord, typedWord };
 };
 
-export default SentenceWriterMV;
+export default UseSentenceWriter;
