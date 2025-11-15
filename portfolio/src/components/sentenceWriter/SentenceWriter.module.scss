@@ -2,18 +2,18 @@
   display: flex;
   flex-direction: row;
   text-align: left;
-  width: 16vw;
+  width: 26vw;
   justify-content: flex-start;
   align-items: flex-start;
   position: relative;
-  left: 20%;
 }
 .green {
   color: rgb(42, 170, 42);
 }
 h2 {
   margin: 0;
-  margin-left: 0.1rem;
+  margin-left: 0.4rem;
+  text-wrap: nowrap;
 }
 .currentWord {
   width: fit-content;
@@ -21,8 +21,10 @@ h2 {
   min-width: 0;
 }
 .lShape {
-  color: rgba(13, 13, 13, 0.809);
+  color: rgba(182, 182, 182, 0.809);
   font-weight: 100;
+    margin-left: 0;
+
 }
 
 .breathing {
