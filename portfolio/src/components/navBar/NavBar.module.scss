@@ -1,0 +1,22 @@
+.navBar {
+  width: 100%;
+  position: fixed;
+  height: fit-content;
+  left: 0;
+  top: 0;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+}
+h2 {
+  padding: 2rem;
+
+  padding-left: 5rem;
+  font-size: 2rem;
+  flex: 1;
+}
+.navButtons {
+  padding: 2rem;
+  padding-right: 5rem;
+  justify-content: flex-end;
+}
