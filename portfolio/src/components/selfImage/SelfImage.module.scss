@@ -1,6 +1,6 @@
 .imageContainer {
-  width: 40vw;
-  height: 40vw;
+  width: fit-content;
+  height: fit-content;
   border-radius: 50%;
   position: relative;
   h2 {
@@ -22,11 +22,21 @@
     top: 0;
     left: 0;
     width: 100%;
-    height:  100%;
+    height: 100%;
     position: absolute;
     font-weight: 20;
-    transform: translate(0,-30%);
-    color: rgb(200, 55, 26);
-    font-size: 45rem;
+    transform: translate(0, -30%);
+    color: rgb(218, 30, 30);
+    font-size: 25rem;
+  }
+  .imgContainer {
+    position: relative;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 25rem;
+      height: 25rem;
+    }
   }
 }

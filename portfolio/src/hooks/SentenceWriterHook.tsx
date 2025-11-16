@@ -7,6 +7,7 @@ const UseSentenceWriter = (
 ) => {
   const [typedWord, setTypedWord] = useState("");
   const [isBreathing, setIsBreathing] = useState(false);
+  const [wordFinished, setWordFinished] = useState(false);
 
   const currentLetterIdx = useRef(0);
   const selectedSentence = useRef(0);
@@ -65,7 +66,7 @@ const UseSentenceWriter = (
     if (sentence.length === currentLetterIdx.current) {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
-
+      setWordFinished(true);
       if (deleteAble) {
         timeoutRef.current = setTimeout(() => removeLetter(), timeToRead);
         return;
@@ -110,7 +111,7 @@ const UseSentenceWriter = (
 
     return "";
   };
-  return { words, isBreathing, selectedSentence };
+  return {  wordFinished, isBreathing, selectedSentence,words };
 };
 
 export default UseSentenceWriter;

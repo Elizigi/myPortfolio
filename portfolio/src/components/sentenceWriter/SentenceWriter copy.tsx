@@ -3,7 +3,7 @@ import styles from "./SentenceWriter.module.scss";
 import UseSentenceWriter from "../../hooks/SentenceWriterHook";
 
 const SentenceWriter = () => {
-  const { wordFinished, isBreathing, selectedSentence, words } =
+  const { words, isBreathing, selectedSentence } =
     UseSentenceWriter(sentencesModelArray);
 
   return (
@@ -11,18 +11,12 @@ const SentenceWriter = () => {
       {sentencesModelArray.map((sentence, index) => (
         <div className={styles.sentence} key={sentence}>
           <div className={styles.currentWord}>
-            {index === 1 ? <h2 className={styles.spacer}>_______ </h2> : ""}
-            <h2 className={index === 1 ? styles.spacedWord : ""}>
-              {words(index, sentence)}
-            </h2>
+            {index === 1 ? <h2 className={styles.spacer}>__________________ </h2> : ""}{" "}
+            <h2 className={index === 1 ?styles.spacedWord:""}>{words(index, sentence)}</h2>
           </div>
-          {wordFinished && index === 0 ? <h2 className={styles.dot}>.</h2> : ""}
           <div className={`${isBreathing ? styles.breathing : ""}`}>
-            <h2
-              className={styles.lShape}
-              style={{ opacity: selectedSentence.current === index ? 1 : 0 }}
-            >
-              |
+            <h2 className={styles.lShape}>
+              {selectedSentence.current === index ? "|" : ""}
             </h2>
           </div>
         </div>

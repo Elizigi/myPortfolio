@@ -1,1 +1,1 @@
-export const sentencesModelArray = ["Hello.", "I`m Eli", "FullStack Developer"];
+export const sentencesModelArray = ["Hello", "I`m Eli", "FullStack Developer"];
