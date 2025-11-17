@@ -5,7 +5,7 @@
 .skillBar {
   display: flex;
   flex-direction: row;
-  height: 4rem;
+  height: 5rem;
   margin: 1rem;
   align-content: center;
   h2 {
@@ -15,6 +15,8 @@
     margin-left: 0.2rem;
     width: 6rem;
     height: 5rem;
+    user-select: none;
+    -webkit-user-drag: none;
   }
 }
 
@@ -25,7 +27,8 @@
 .dot {
   color: rgb(236, 96, 83);
   position: absolute;
+  user-select: none;
   z-index: 99;
   font-size: 1.5rem;
-  transform: translate(-40%, 160%);
+  transform: translate(-40%, 200%);
 }
