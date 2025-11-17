@@ -11,15 +11,15 @@ const PlusBox = () => {
       </div>
       <div className={styles.plusBox}>
         <div className={styles.title}>
-          <h1>5</h1> <h1 className={styles.colored}>+</h1>
+          <h1>100</h1> <h1 className={styles.colored}>%</h1>
         </div>
-        <h2>Completed Projects</h2>
+        <h2>On Board</h2>
       </div>
       <div className={styles.plusBox}>
         <div className={styles.title}>
-          <h1>5</h1> <h1 className={styles.colored}>+</h1>
+          <h1>500</h1> <h1 className={styles.colored}>+</h1>
         </div>
-        <h2>Completed Projects</h2>
+        <h2>Coding Hours</h2>
       </div>
     </div>
   );
