@@ -1,3 +1,8 @@
+
+import monitor from "../svg/monitor.svg";
+import phone from "../svg/phone.svg";
+import fullStack from "../svg/fullStack.svg";
+
 export const skillsArray = [
   "HTML",
   "CSS",
@@ -21,6 +26,3 @@ export const skillsBarArray = [
   { line: "Full-Stack Development", svg: fullStack },
 ];
 
-import monitor from "../svg/monitor.svg";
-import phone from "../svg/phone.svg";
-import fullStack from "../svg/fullStack.svg";

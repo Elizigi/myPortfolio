@@ -1,0 +1,45 @@
+.projectScreen {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  margin-top: 8rem;
+  align-items: center;
+  h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+.mainContent {
+  display: flex;
+  flex-direction: row;
+}
+.skillBar {
+  display: flex;
+  flex-direction: row;
+  height: 6rem;
+  margin: 1rem;
+  align-content: center;
+  h2 {
+    align-content: center;
+  }
+  img {
+    margin-left: 0.2rem;
+    width: 6rem;
+    height: 5rem;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+}
+
+.midBar {
+  border-left: solid 3px $orange;
+}
+
+.dot {
+  color: $orange;
+  position: absolute;
+  user-select: none;
+  z-index: 99;
+  font-size: 1rem;
+  transform: translate(-33%, 400%);
+}
