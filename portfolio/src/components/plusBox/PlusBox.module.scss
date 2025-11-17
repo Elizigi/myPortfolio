@@ -1,0 +1,21 @@
+.plusBoxContainer {
+  display: flex;
+  flex-direction: row;
+  h2 {
+    text-wrap: wrap;
+    width: 3rem;
+  }
+}
+.plusBox {
+  margin-right: 10rem;
+}
+.colored {
+  color: rgb(236, 96, 83);
+  margin-left: 0.4rem;
+  font-weight: 4000;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}

@@ -1,3 +1,4 @@
+import PlusBox from "../plusBox/PlusBox";
 import styles from "./AboutMeText.module.scss";
 
 const AboutMeText = () => {
@@ -10,6 +11,7 @@ const AboutMeText = () => {
         and making everything work reliably. I'm independent, sharp, and always
         improving.
       </p>
+      <PlusBox />
     </div>
   );
 };
