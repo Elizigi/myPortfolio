@@ -1,5 +1,5 @@
 import styles from "./SelfImage.module.scss";
-import empty from "../../../public/empty.png";
+import empty from "../../images/empty.png";
 
 const SelfImage = () => {
   return (

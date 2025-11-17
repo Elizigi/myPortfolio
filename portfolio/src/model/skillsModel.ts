@@ -15,3 +15,8 @@ export const skillsArray = [
   "Firestore",
   "Git",
 ];
+export const skillsBarArray = [
+  { line: "Website Development", svg: "" },
+  { line: "App Development", svg: "" },
+  { line: "Full-Stack Development", svg: "" },
+];

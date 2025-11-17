@@ -1,0 +1,26 @@
+.skillBarContainer {
+  display: flex;
+  flex-direction: column;
+}
+.skillBar {
+  display: flex;
+  flex-direction: row;
+  height: 4rem;
+  margin: 1rem;
+  align-content: center;
+  h2 {
+    margin: 0 2rem;
+    align-content: center;
+  }
+}
+
+.midBar {
+  border-left: solid 3px orangered;
+}
+
+.dot {
+  color: orangered;
+  position: absolute;
+  z-index: 99;
+  transform: translate(-40%,270%);
+}
