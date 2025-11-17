@@ -4,7 +4,7 @@ import styles from "./About.module.scss";
 
 const About = () => {
   return (
-    <div className={styles.aboutPage}>
+    <div className={styles.aboutScreen}>
       <div className={styles.mainContent}>
         <SvgSkillBar />
         <AboutMeText />

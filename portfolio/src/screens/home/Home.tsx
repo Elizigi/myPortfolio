@@ -6,7 +6,7 @@ import TopButtons from "../../components/topButton/TopButtons";
 
 const Home = () => {
   return (
-    <div className={styles.homePage}>
+    <div className={styles.homeScreen}>
       <div className={styles.mainContent}>
         <div>
           <SentenceWriter />
