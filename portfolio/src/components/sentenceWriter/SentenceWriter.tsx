@@ -11,7 +11,7 @@ const SentenceWriter = () => {
       {sentencesModelArray.map((sentence, index) => (
         <div className={styles.sentence} key={sentence}>
           <div className={styles.currentWord}>
-            {index === 1 ? <h2 className={styles.spacer}>_______ </h2> : ""}
+            {index === 1 ? <h2 className={styles.spacer}>_________ </h2> : ""}
             <h2 className={index === 1 ? styles.spacedWord : ""}>
               {words(index, sentence)}
             </h2>
