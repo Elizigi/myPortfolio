@@ -1,0 +1,27 @@
+.projectsBoxContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .projectBox {
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: $left-shifted;
+    text-align: left;
+  }
+  .textColumn {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    width: 500px;
+    border: 4px solid $green-color;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+}

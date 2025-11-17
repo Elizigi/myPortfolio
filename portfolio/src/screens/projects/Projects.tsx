@@ -1,3 +1,4 @@
+import ProjectsBox from "../../components/projectsBox/ProjectsBox";
 import styles from "./Projects.module.scss";
 
 const Projects = () => {
@@ -8,6 +9,7 @@ const Projects = () => {
         <div className={styles.dot}>●</div>
         <div className={styles.midBar}></div>
       </div>
+      <ProjectsBox />
     </div>
   );
 };
