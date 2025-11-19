@@ -11,8 +11,8 @@ const TopButtons: FC<TopButtonsProps> = ({ contacts, projects }) => {
     <div className={styles.topButtonsContainer}>
       {contacts && (
         <div className={styles.distantButtons}>
-          <CustomButton written={"Get Contact"} full />
-          <CustomButton written={"My Resume"} />
+          <CustomButton written={"Contacts"} full />
+          <CustomButton written={"Resume"} />
         </div>
       )}
 

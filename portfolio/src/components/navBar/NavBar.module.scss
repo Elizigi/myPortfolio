@@ -7,15 +7,15 @@
   text-align: left;
   display: flex;
   flex-direction: row;
-  background-color: $bg-color;
+  background-color: $green-color;
   z-index: 999;
   h2 {
-    padding:0 2rem ;
+    padding: 0 2rem;
     text-wrap: nowrap;
     padding-left: $left-shifted;
     font-size: 2rem;
+    margin-bottom: 1rem;
     flex: 1;
-    
   }
   .navButtons {
     padding: 2rem;
