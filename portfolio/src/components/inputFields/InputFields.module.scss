@@ -1,0 +1,32 @@
+.inputFieldContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: $left-shifted;
+  margin-top: 5rem;
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  input {
+    font-size: 2rem;
+    background-color: transparent;
+    border-color: transparent;
+    color: $text-color;
+    border-bottom: 1px solid $text-color;
+    margin-bottom: 4rem;
+    &:focus {
+      outline: none;
+    }
+  }
+  textarea {
+    font-size: 2rem;
+    background-color: transparent;
+    border-color: transparent;
+    color: $text-color;
+    border-bottom: 1px solid $text-color;
+    height: 8rem;
+    &:focus {
+      outline: none;
+    }
+  }
+}

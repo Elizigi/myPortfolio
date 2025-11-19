@@ -1,20 +1,30 @@
+import { useRef } from "react";
 import CustomButton from "../../components/customButton/CustomButton";
+import InputFields from "../../components/inputFields/InputFields";
 import styles from "./Contacts.module.scss";
 
 const Contacts = () => {
+  const formRef = useRef<HTMLFormElement>(null);
   return (
     <div className={styles.contactsScreen}>
       <div className={styles.titleRow}>
         <h2 className={styles.spacer}>______ </h2>
-        <h2>Contacts</h2>
+        <h4>Contacts</h4>
       </div>
-      <div className={styles.contactColumn}>
-        <div className={styles.contactsContent}>
-          <h3>Get in Contact:</h3>
-        </div>
+      <div className={styles.contactRow}>
+        <div className={styles.contactColumn}>
+          <div className={styles.contactsContent}>
+            <h3>Get in Contact:</h3>
+          </div>
 
-        <div></div>
-        <CustomButton full written="Send" />
+          <div></div>
+          <CustomButton
+            onClick={() => formRef.current?.requestSubmit()}
+            full
+            written="Send"
+          />
+        </div>
+        <InputFields formRef={formRef}></InputFields>
       </div>
     </div>
   );
