@@ -12,7 +12,11 @@ const SentenceWriter = () => {
         <div className={styles.sentence} key={sentence}>
           <div className={styles.currentWord}>
             {index === 1 ? <h2 className={styles.spacer}>_________ </h2> : ""}
-            <h2 className={index === 1 ? styles.spacedWord : ""}>
+            <h2
+              className={`${index === 1 ? styles.spacedWord : ""} ${
+                index === 0 ? styles.smallWord : ""
+              }`}
+            >
               {words(index, sentence)}
             </h2>
           </div>
