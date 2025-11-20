@@ -5,10 +5,18 @@ const NavBar = () => {
     <div className={styles.navBar}>
       <h2>Eli P. Zigdon</h2>
       <div className={styles.navButtons}>
-        <button>Home</button>
-        <button>About</button>
-        <button>Projects</button>
-        <button>Contact</button>
+        <a href="#home">
+          <button>Home</button>
+        </a>
+        <a href="#about">
+          <button>About</button>
+        </a>
+        <a href="#projects">
+          <button>Projects</button>
+        </a>
+        <a href="#contacts">
+          <button>Contact</button>
+        </a>
       </div>
     </div>
   );

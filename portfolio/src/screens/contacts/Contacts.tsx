@@ -6,7 +6,7 @@ import styles from "./Contacts.module.scss";
 const Contacts = () => {
   const formRef = useRef<HTMLFormElement>(null);
   return (
-    <div className={styles.contactsScreen}>
+    <div id="contacts" className={styles.contactsScreen}>
       <div className={styles.titleRow}>
         <h2 className={styles.spacer}>______ </h2>
         <h4>Contacts</h4>
@@ -17,7 +17,6 @@ const Contacts = () => {
             <h3>Get in Contact:</h3>
           </div>
 
-          <div></div>
           <CustomButton
             onClick={() => formRef.current?.requestSubmit()}
             full

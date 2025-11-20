@@ -7,6 +7,7 @@ import TopButtons from "../../components/topButton/TopButtons";
 const Home = () => {
   return (
     <div className={styles.homeScreen}>
+      <div id="home" className={styles.bookMark}></div>
       <div className={styles.mainContent}>
         <div>
           <SentenceWriter />
@@ -14,7 +15,9 @@ const Home = () => {
         </div>
         <SelfImage />
       </div>
-      <SkillsButtons></SkillsButtons>
+      <div id="about">
+        <SkillsButtons />
+      </div>
     </div>
   );
 };
