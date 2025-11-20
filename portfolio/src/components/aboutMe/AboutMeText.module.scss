@@ -6,6 +6,8 @@
   padding-left: $left-shifted;
   @media (max-width: 768px) {
     padding-left: $left-shifted-mobile;
+    width: 90%;
+    margin-top: 1rem;
   }
   text-align: left;
   p {

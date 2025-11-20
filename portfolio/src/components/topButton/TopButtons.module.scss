@@ -5,9 +5,15 @@
   }
   .distantButtons {
     margin-left: 3rem;
+    @media (max-width: 768px) {
+      margin: 0 auto;
+    }
     button {
       margin-right: 0;
       margin-left: 8rem;
+      @media (max-width: 768px) {
+        margin: $left-shifted-mobile;
+      }
     }
   }
 }

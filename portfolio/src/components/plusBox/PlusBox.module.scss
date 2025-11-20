@@ -1,6 +1,12 @@
 .plusBoxContainer {
   display: flex;
   flex-direction: row;
+  @media (max-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0 auto;
+  }
   h2 {
     text-wrap: wrap;
     width: 10rem;
@@ -10,6 +16,11 @@
 .plusBox {
   margin: 0;
   margin-right: 10rem;
+  @media (max-width: 768px) {
+    margin: 0.5rem;
+
+    margin-right: 0;
+  }
 }
 .colored {
   color: $orange;

@@ -5,8 +5,9 @@
   border-radius: 20px;
   border: 1px transparent solid;
   color: $text-faded;
+  margin-top: 0.5rem;
   &:hover {
     border: 1px transparent solid;
-     color: $text-color;
+    color: $text-color;
   }
 }

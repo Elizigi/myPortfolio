@@ -4,15 +4,25 @@
   text-align: left;
   width: 60rem;
   padding-left: $left-shifted;
-  @media (max-width: 768px) {
-    padding-left: $left-shifted-mobile;
-  }
+
   justify-content: flex-start;
   align-items: flex-start;
   position: relative;
   height: fit-content;
   margin-bottom: 2rem;
   font-size: 3rem;
+  @media (max-width: 768px) {
+    padding-left: 0;
+    width: 80%;
+    font-size: 2rem;
+    margin: 0 auto;
+  }
+  @media (max-width: 468px) {
+    padding-left: 0;
+    width: 100%;
+    font-size: 1.5rem;
+    margin: 0 auto;
+  }
   .sentence {
     display: flex;
     flex-direction: row;
@@ -39,6 +49,9 @@
   }
   .spacedWord {
     margin-left: -9rem;
+    @media (max-width: 468px) {
+      margin-left: 0;
+    }
     font-weight: 500;
   }
 
