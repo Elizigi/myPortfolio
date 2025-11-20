@@ -25,6 +25,9 @@
 .contactsContent {
   display: flex;
   flex-direction: row;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 .titleRow {
   display: flex;
@@ -35,6 +38,10 @@
     margin: 0;
     position: relative;
     transform: translate(0, -10%);
+    @media (max-width: 768px) {
+      flex-direction: column;
+      width: 2rem;
+    }
     font-weight: 100;
     user-select: none;
   }
@@ -43,9 +50,17 @@
   display: flex;
   flex-direction: column;
   margin-left: $left-shifted;
+  @media (max-width: 768px) {
+    margin: 0 auto;
+    width: 80%;
+    font-size: 2rem;
+  }
 }
 .contactRow {
   display: flex;
   flex-direction: row;
   margin-bottom: 5rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }

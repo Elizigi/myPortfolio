@@ -4,6 +4,7 @@ import InputFields from "../../components/inputFields/InputFields";
 import styles from "./Contacts.module.scss";
 
 const Contacts = () => {
+  const windowSize = window.innerWidth > 769;
   const formRef = useRef<HTMLFormElement>(null);
   return (
     <div id="contacts" className={styles.contactsScreen}>
@@ -17,14 +18,23 @@ const Contacts = () => {
             <h3>Get in Contact:</h3>
           </div>
 
-          <CustomButton
-            onClick={() => formRef.current?.requestSubmit()}
-            full
-            written="Send"
-          />
+          {windowSize && (
+            <CustomButton
+              onClick={() => formRef.current?.requestSubmit()}
+              full
+              written="Send"
+            />
+          )}
         </div>
         <InputFields formRef={formRef}></InputFields>
       </div>
+      {!windowSize && (
+        <CustomButton
+          onClick={() => formRef.current?.requestSubmit()}
+          full
+          written="Send"
+        />
+      )}
     </div>
   );
 };
