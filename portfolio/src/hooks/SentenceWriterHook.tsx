@@ -111,7 +111,7 @@ const UseSentenceWriter = (
 
     return "";
   };
-  return {  wordFinished, isBreathing, selectedSentence,words };
+  return { wordFinished, isBreathing, selectedSentence, words };
 };
 
 export default UseSentenceWriter;
